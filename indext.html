@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>당신 옆의 공익활동 | 서울시공익활동지원센터</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css" rel="stylesheet" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Pretendard', 'sans-serif'],
+                    },
+                    colors: {
+                        ivory: '#FAF9F6',
+                        forest: {
+                            500: '#3a9b73',
+                            600: '#2E7D5C',
+                            700: '#215c43',
+                        },
+                        orange: {
+                            400: '#fb923c',
+                            500: '#f97316',
+                            600: '#ea580c',
+                        },
+                        lavender: {
+                            200: '#E9D5FF',
+                            300: '#D8B4FE',
+                        },
+                        mint: {
+                            200: '#A7F3D0',
+                        }
+                    },
+                    boxShadow: {
+                        'brutal': '6px 6px 0px 0px rgba(17, 17, 17, 1)',
+                        'brutal-hover': '8px 8px 0px 0px rgba(17, 17, 17, 1)',
+                        'brutal-sm': '4px 4px 0px 0px rgba(17, 17, 17, 1)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #FAF9F6;
+            background-image: radial-gradient(#d1d5db 1px, transparent 1px);
+            background-size: 20px 20px;
+            color: #111111;
+        }
+        /* Playful highlight */
+        .highlight-marker {
+            background: linear-gradient(180deg, rgba(255,255,255,0) 50%, #A7F3D0 50%);
+            display: inline;
+        }
+        .highlight-marker-orange {
+            background: linear-gradient(180deg, rgba(255,255,255,0) 50%, #FDBA74 50%);
+            display: inline;
+        }
+        /* Custom scrollbar for horizontal scrolling elements */
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased break-keep selection:bg-orange-500 selection:text-white">
+
+    <header class="bg-white border-b-4 border-gray-900 sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex flex-col">
+                <span class="text-xs font-bold px-2 py-0.5 bg-gray-900 text-white rounded-full w-max mb-1 shadow-brutal-sm">서울시공익활동지원센터</span>
+                <h1 class="text-2xl font-black text-forest-600 tracking-tight">당신 옆의 공익활동</h1>
+            </div>
+            <nav class="hidden md:flex space-x-6 text-base font-bold text-gray-800">
+                <a href="#" class="hover:-translate-y-1 transition-transform">센터소식</a>
+                <a href="#" class="text-forest-600 border-b-4 border-forest-600 pb-1">당신 옆의 공익활동</a>
+                <a href="#" class="hover:-translate-y-1 transition-transform">자료실</a>
+            </nav>
+            <button class="md:hidden bg-gray-900 text-white p-2 rounded-lg border-2 border-gray-900 shadow-brutal-sm">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 py-12 md:py-16 overflow-hidden">
+        <article>
+            <div class="mb-16 relative">
+                <!-- Decorative background shapes -->
+                <div class="absolute -top-10 -left-10 w-32 h-32 bg-mint-200 rounded-full border-4 border-gray-900 -z-10"></div>
+                <div class="absolute -bottom-10 -right-5 w-24 h-24 bg-orange-400 rounded-full border-4 border-gray-900 -z-10"></div>
+                
+                <img src="image_5dd666.jpg" alt="당신 옆의 공익활동 로고" class="w-full max-w-4xl mx-auto rounded-3xl border-4 border-gray-900 shadow-brutal object-contain bg-black mb-8 transform hover:-translate-y-2 transition-transform duration-300">
+                
+                <div class="text-center space-y-4 max-w-3xl mx-auto">
+                    <p class="text-xl md:text-2xl font-bold leading-relaxed text-gray-800 bg-white p-6 rounded-2xl border-4 border-gray-900 shadow-brutal relative">
+                        <span class="absolute -top-4 -left-4 text-4xl">✨</span>
+                        일상생활 속에서 이런 건 좀 바뀌었으면 좋겠다는 생각, 해보신 적 있으신가요?<br>
+                        나의 일상에서 시작된 작은 질문이 탐구와 실천을 통해 조금씩 세상의 관심으로 확장되어 가는 공익활동 커뮤니티입니다.
+                    </p>
+                </div>
+            </div>
+
+            <section class="mb-24">
+                <div class="inline-block bg-lavender-300 border-4 border-gray-900 rounded-full px-6 py-2 mb-6 shadow-brutal-sm transform -rotate-2">
+                    <h2 class="text-2xl font-black">🚀 당옆공의 지난 여정 (2023~2025)</h2>
+                </div>
+                <p class="text-lg font-bold mb-8 text-gray-700">사회문제 해결 프로젝트부터 정책 제안, 유튜브 영상 촬영까지! 3년 동안 30팀의 다양한 시민 모임이 당옆공과 함께했습니다.</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+                    <!-- 2023 -->
+                    <div class="bg-white border-4 border-gray-900 rounded-3xl p-6 shadow-brutal hover:shadow-brutal-hover hover:-translate-y-2 transition-all group">
+                        <div class="w-14 h-14 bg-mint-200 border-4 border-gray-900 rounded-full flex items-center justify-center mb-4 group-hover:rotate-12 transition-transform">
+                            <span class="text-xl font-black">23'</span>
+                        </div>
+                        <h3 class="text-xl font-black mb-3 text-forest-600">시작하는 커뮤니티</h3>
+                        <p class="text-gray-700 font-semibold mb-4 text-sm">기획자의 공익적 취향이 담긴 모임으로 첫 발을 떼었습니다. 자율성을 강화하고 체험 부스 운영으로 공유했습니다.</p>
+                        <a href="#" class="inline-block text-sm font-bold bg-gray-100 border-2 border-gray-900 rounded-full px-4 py-1 hover:bg-forest-500 hover:text-white transition-colors">2023년 후기 보기 &rarr;</a>
+                    </div>
+                    
+                    <!-- 2024 -->
+                    <div class="bg-white border-4 border-gray-900 rounded-3xl p-6 shadow-brutal hover:shadow-brutal-hover hover:-translate-y-2 transition-all group">
+                        <div class="w-14 h-14 bg-orange-400 border-4 border-gray-900 rounded-full flex items-center justify-center mb-4 group-hover:rotate-12 transition-transform">
+                            <span class="text-xl font-black text-white">24'</span>
+                        </div>
+                        <h3 class="text-xl font-black mb-3 text-orange-600">성장하는 커뮤니티</h3>
+                        <p class="text-gray-700 font-semibold mb-4 text-sm">시민들이 직접 선정한 의제로 주도적인 커뮤니티를 일궈냈습니다. 공모장 교육과 정책 제안 등 후속 활동을 지원했습니다.</p>
+                        <a href="#" class="inline-block text-sm font-bold bg-gray-100 border-2 border-gray-900 rounded-full px-4 py-1 hover:bg-orange-500 hover:text-white transition-colors">2024년 후기 보기 &rarr;</a>
+                    </div>
+
+                    <!-- 2025 -->
+                    <div class="bg-white border-4 border-gray-900 rounded-3xl p-6 shadow-brutal hover:shadow-brutal-hover hover:-translate-y-2 transition-all group">
+                        <div class="w-14 h-14 bg-lavender-300 border-4 border-gray-900 rounded-full flex items-center justify-center mb-4 group-hover:rotate-12 transition-transform">
+                            <span class="text-xl font-black">25'</span>
+                        </div>
+                        <h3 class="text-xl font-black mb-3 text-purple-700">세분화 및 확장</h3>
+                        <p class="text-gray-700 font-semibold mb-4 text-sm">모임 성격에 맞춘 단계별 지원(시민/정책/조직)과 전문기관 협업 프로젝트를 통해 깊이를 더했습니다. (피칭데이 개최)</p>
+                        <a href="#" class="inline-block text-sm font-bold bg-gray-100 border-2 border-gray-900 rounded-full px-4 py-1 hover:bg-purple-600 hover:text-white transition-colors">2025년 후기 보기 &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- 2025 YouTube Video -->
+                <div class="bg-yellow-100 border-4 border-gray-900 rounded-3xl p-6 md:p-8 shadow-brutal relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-yellow-300 rounded-full blur-2xl -mr-10 -mt-10 opacity-50"></div>
+                    <div class="flex flex-col md:flex-row items-center gap-8 relative z-10">
+                        <div class="w-full md:w-1/2">
+                            <h3 class="text-2xl font-black mb-4">📺 2025 당신 옆의 공익활동<br>생생한 현장 영상</h3>
+                            <p class="text-gray-700 font-bold mb-4">"창작과 느슨한 연결은 여전히, 우리를 살아있게 만든다"<br>다양한 시민 모임의 활동 모습을 영상으로 만나보세요!</p>
+                        </div>
+                        <div class="w-full md:w-1/2">
+                            <!-- YouTube Thumbnail Link -->
+                            <a href="https://youtu.be/vDB-2Tmdqj4?si=vihfFzfoGMZdSaJO" target="_blank" class="block relative rounded-2xl border-4 border-gray-900 overflow-hidden group shadow-brutal-sm hover:shadow-brutal transition-all transform hover:-translate-y-1">
+                                <img src="https://img.youtube.com/vi/vDB-2Tmdqj4/maxresdefault.jpg" alt="2025 당신 옆의 공익활동 영상 썸네일" class="w-full object-cover aspect-video group-hover:scale-105 transition-transform duration-500">
+                                <div class="absolute inset-0 bg-black bg-opacity-20 flex items-center justify-center transition-colors group-hover:bg-opacity-40">
+                                    <div class="bg-red-600 w-16 h-16 rounded-full flex items-center justify-center border-4 border-gray-900 shadow-brutal-sm group-hover:scale-110 transition-transform">
+                                        <i data-lucide="play" class="text-white w-8 h-8 ml-1 fill-current"></i>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mb-24">
+                <div class="text-center mb-12">
+                    <span class="bg-forest-600 text-white font-black px-4 py-1 rounded-full border-2 border-gray-900 shadow-brutal-sm text-sm mb-4 inline-block">2026 NEW</span>
+                    <h2 class="text-3xl md:text-5xl font-black text-gray-900 mb-4">2026 당옆공, <span class="highlight-marker">이렇게 바뀌어요!</span></h2>
+                    <p class="text-lg font-bold text-gray-600">올해는 시민모임 40팀과 함께하며, 동문회 시스템 등 네트워킹이 더욱 강력해집니다.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                    <!-- 학습조직형 -->
+                    <div class="bg-mint-50 border-4 border-gray-900 rounded-[2rem] p-8 shadow-brutal hover:-translate-y-2 transition-transform">
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="w-12 h-12 bg-mint-200 border-4 border-gray-900 rounded-xl flex items-center justify-center transform -rotate-6">
+                                <i data-lucide="book-open" class="text-gray-900 w-6 h-6"></i>
+                            </div>
+                            <h3 class="text-3xl font-black text-forest-700">학습조직형</h3>
+                        </div>
+                        <p class="text-lg font-bold text-gray-800 mb-6 bg-white p-4 border-2 border-gray-900 rounded-xl border-dashed">
+                            관심 있는 시민공익의제를 <strong class="text-forest-600">학습</strong>하는 모임
+                        </p>
+                        <ul class="space-y-4 font-bold text-gray-700 mb-8">
+                            <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="text-forest-500 w-5 h-5"></i> 상하반기 통합 총 20팀</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="text-forest-500 w-5 h-5"></i> 활동비 <strong class="text-gray-900 text-xl bg-mint-200 px-2 border border-gray-900 rounded transform -rotate-2 inline-block">30만원</strong> 지원</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="text-forest-500 w-5 h-5"></i> 결과물: 활동보고서, 모임 후기</li>
+                        </ul>
+                    </div>
+
+                    <!-- 활동조직형 -->
+                    <div class="bg-orange-50 border-4 border-gray-900 rounded-[2rem] p-8 shadow-brutal hover:-translate-y-2 transition-transform">
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="w-12 h-12 bg-orange-400 border-4 border-gray-900 rounded-xl flex items-center justify-center transform rotate-6">
+                                <i data-lucide="zap" class="text-white w-6 h-6"></i>
+                            </div>
+                            <h3 class="text-3xl font-black text-orange-600">활동조직형</h3>
+                        </div>
+                        <p class="text-lg font-bold text-gray-800 mb-6 bg-white p-4 border-2 border-gray-900 rounded-xl border-dashed">
+                            관심의제를 바탕으로 <strong class="text-orange-600">프로젝트를 실행</strong>하는 모임
+                        </p>
+                        <ul class="space-y-4 font-bold text-gray-700 mb-8">
+                            <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="text-orange-500 w-5 h-5"></i> 상하반기 통합 총 20팀 (기존 모임 지원 가능)</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="text-orange-500 w-5 h-5"></i> 활동비 <strong class="text-gray-900 text-xl bg-orange-300 px-2 border border-gray-900 rounded transform rotate-2 inline-block">70만원</strong> 지원</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="text-orange-500 w-5 h-5"></i> 결과물: 프로젝트 결과물(캠페인 등), 보고서</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Networking Box -->
+                <div class="bg-gray-900 text-white border-4 border-black rounded-[2rem] p-8 shadow-[8px_8px_0px_0px_#f97316] relative overflow-hidden">
+                    <div class="absolute top-10 right-10 opacity-10">
+                        <i data-lucide="users" class="w-48 h-48"></i>
+                    </div>
+                    <h3 class="text-2xl font-black mb-4 text-orange-400 flex items-center gap-2">
+                        <i data-lucide="network"></i> 동문 네트워킹 강화!
+                    </h3>
+                    <p class="text-lg font-semibold leading-relaxed">
+                        올해 참여자와 이전 동문들이 함께 만나는 <strong class="text-white bg-orange-600 px-2 py-0.5 rounded">당신 옆의 공익활동 졸업식</strong>이 7월에 열립니다!<br>
+                        서로의 활동을 공유하고 협업을 이야기하는 든든한 동문회 시스템으로 확장됩니다.
+                    </p>
+                </div>
+            </section>
+
+            <section class="mb-24">
+                <h2 class="text-2xl md:text-3xl font-black mb-8 border-b-4 border-gray-900 pb-4 inline-block">이런 것도 공익활동이 될 수 있나요? 👀</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Example 1 -->
+                    <div class="bg-white border-4 border-gray-900 rounded-2xl p-6 shadow-brutal-sm">
+                        <div class="text-3xl mb-3">🌳</div>
+                        <h4 class="text-xl font-black mb-2">디지털 탄소 발자국 지우기</h4>
+                        <p class="font-bold text-gray-600 text-sm mb-3 border-l-4 border-mint-500 pl-3">"환경을 위해 광고 메일을 지우고 있어요. 이것도 모임이 될까요?"</p>
+                        <p class="text-sm font-semibold text-gray-800">네! <strong>학습조직형</strong>에 지원하여 함께 할 동료를 만나고, 환경에 대해 공부하기 위한 지원을 받을 수 있어요.</p>
+                    </div>
+                    
+                    <!-- Example 2 -->
+                    <div class="bg-white border-4 border-gray-900 rounded-2xl p-6 shadow-brutal-sm">
+                        <div class="text-3xl mb-3">🏪</div>
+                        <h4 class="text-xl font-black mb-2">우리 동네 가치 가게 찾기</h4>
+                        <p class="font-bold text-gray-600 text-sm mb-3 border-l-4 border-orange-400 pl-3">"동네의 제로 웨이스트, 아동 환영 가게를 방문하는 모임은요?"</p>
+                        <p class="text-sm font-semibold text-gray-800">그럼요! 가치를 실천하는 곳을 지지하는 멋진 활동입니다. <strong>활동조직형</strong>으로 이웃들과 캠페인도 진행해 보세요!</p>
+                    </div>
+
+                    <!-- Idea Tags -->
+                    <div class="md:col-span-2 bg-lavender-200 border-4 border-gray-900 rounded-2xl p-6 flex flex-wrap gap-3 items-center shadow-brutal-sm">
+                        <span class="font-black text-lg mr-2">💡 자유로운 의제 예시:</span>
+                        <span class="bg-white border-2 border-gray-900 rounded-full px-4 py-1 font-bold text-sm shadow-sm">🤖 대체된 일의 하루</span>
+                        <span class="bg-white border-2 border-gray-900 rounded-full px-4 py-1 font-bold text-sm shadow-sm">🏠 혼자 살기 연구소</span>
+                        <span class="bg-white border-2 border-gray-900 rounded-full px-4 py-1 font-bold text-sm shadow-sm">👗 헌옷 변신 대작전</span>
+                        <span class="bg-white border-2 border-gray-900 rounded-full px-4 py-1 font-bold text-sm shadow-sm">🙋‍♂️ 도움 요청 연습실</span>
+                        <span class="bg-white border-2 border-gray-900 rounded-full px-4 py-1 font-bold text-sm shadow-sm">👄 갈라진 말들 수집소</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mb-24 bg-white border-4 border-gray-900 rounded-[2rem] p-8 md:p-12 shadow-brutal">
+                <div class="mb-10 text-center">
+                    <h2 class="text-3xl md:text-4xl font-black text-gray-900 mb-4">2026 참가 모집 안내 📌</h2>
+                    <p class="text-lg font-bold text-gray-600">당신의 작은 시작을 전폭적으로 지원합니다.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Who -->
+                    <div class="bg-[#FFF4E6] border-4 border-gray-900 rounded-2xl p-6 shadow-brutal-sm">
+                        <h4 class="text-xl font-black mb-4 flex items-center gap-2"><i data-lucide="smile" class="text-orange-500"></i> 누가 지원하나요?</h4>
+                        <ul class="space-y-2 text-sm font-bold text-gray-800">
+                            <li>• 커뮤니티를 기획/이끌고 싶은 분</li>
+                            <li>• 열린 마음으로 소통할 수 있는 분</li>
+                            <li>• 아이디어를 실천해보고 싶은 분</li>
+                            <li>• 공익활동을 경험하고 성장하고 싶은 팀/개인</li>
+                        </ul>
+                    </div>
+
+                    <!-- What -->
+                    <div class="bg-[#E6F4EA] border-4 border-gray-900 rounded-2xl p-6 shadow-brutal-sm">
+                        <h4 class="text-xl font-black mb-4 flex items-center gap-2"><i data-lucide="gift" class="text-forest-600"></i> 무엇을 지원받나요?</h4>
+                        <ul class="space-y-2 text-sm font-bold text-gray-800">
+                            <li>• 활동비 지원 (30만원 / 70만원)</li>
+                            <li>• 커뮤니티 기획 교육 제공</li>
+                            <li>• 공익활동지원센터 모임 공간 무료 대관</li>
+                            <li>• 시민 활동가들과의 네트워킹 기회</li>
+                        </ul>
+                    </div>
+
+                    <!-- Schedule -->
+                    <div class="bg-[#F3E8FF] border-4 border-gray-900 rounded-2xl p-6 shadow-brutal-sm lg:col-span-1 md:col-span-2">
+                        <h4 class="text-xl font-black mb-4 flex items-center gap-2"><i data-lucide="calendar" class="text-purple-600"></i> 주요 일정</h4>
+                        <ul class="space-y-3 text-sm font-bold text-gray-800">
+                            <li class="flex justify-between border-b-2 border-purple-200 pb-1">
+                                <span class="text-purple-800">서류 접수</span> <span>2.25 ~ 3.15</span>
+                            </li>
+                            <li class="flex justify-between border-b-2 border-purple-200 pb-1">
+                                <span class="text-purple-800">인터뷰 심사</span> <span>3.19 (목)</span>
+                            </li>
+                            <li class="flex justify-between border-b-2 border-purple-200 pb-1">
+                                <span class="text-purple-800">OT / 교육</span> <span>4월 초</span>
+                            </li>
+                            <li class="flex justify-between border-b-2 border-purple-200 pb-1">
+                                <span class="text-purple-800">정기 모임</span> <span>5월 ~ 7월</span>
+                            </li>
+                            <li class="flex justify-between">
+                                <span class="text-purple-800">졸업식(공유회)</span> <span>7.23 (목)</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#" class="bg-forest-600 text-white text-lg font-black py-4 px-8 rounded-full border-4 border-gray-900 shadow-brutal hover:translate-y-1 hover:shadow-brutal-sm transition-all text-center">
+                        📝 지원서 작성하기
+                    </a>
+                    <a href="#" class="bg-yellow-400 text-gray-900 text-lg font-black py-4 px-8 rounded-full border-4 border-gray-900 shadow-brutal hover:translate-y-1 hover:shadow-brutal-sm transition-all text-center flex justify-center items-center gap-2">
+                        <i data-lucide="download"></i> 예산 편성 양식 다운
+                    </a>
+                </div>
+            </section>
+
+            <section class="mb-24" id="community-list">
+                <div class="mb-10 flex flex-col md:flex-row justify-between items-end gap-4 border-b-4 border-gray-900 pb-6">
+                    <div>
+                        <h3 class="text-3xl font-black text-gray-900 mb-2 flex items-center gap-3">
+                            🔍 당옆공 커뮤니티 탐색
+                        </h3>
+                        <p class="text-gray-700 font-bold text-lg">
+                            지금까지 함께한 매력적인 모임들을 찾아보세요.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Playful Search & Filter Board -->
+                <div class="bg-mint-100 p-6 rounded-3xl border-4 border-gray-900 shadow-brutal mb-12">
+                    <div class="grid grid-cols-1 gap-6">
+                        
+                        <!-- Search Box -->
+                        <div class="flex flex-wrap items-center gap-3 border-b-4 border-gray-900 pb-6">
+                            <span class="font-black text-gray-900 text-lg w-20 bg-white border-2 border-gray-900 rounded-lg px-2 py-1 text-center transform -rotate-2">키워드</span>
+                            <select class="border-4 border-gray-900 rounded-xl px-4 py-2 font-bold focus:outline-none focus:bg-yellow-100 bg-white shadow-brutal-sm">
+                                <option>전체</option>
+                                <option>제목</option>
+                            </select>
+                            <input type="text" placeholder="검색어를 입력하세요!" class="flex-1 min-w-[200px] border-4 border-gray-900 rounded-xl px-4 py-2 font-bold focus:outline-none focus:bg-yellow-100 bg-white shadow-brutal-sm placeholder-gray-400">
+                            <button class="bg-gray-900 text-white px-6 py-2.5 rounded-xl font-black hover:bg-forest-600 transition-colors border-2 border-black shadow-brutal-sm hover:translate-y-1 hover:shadow-none active:translate-y-2">검색</button>
+                            <button class="bg-white text-gray-900 px-4 py-2.5 rounded-xl font-black border-4 border-gray-900 hover:bg-gray-100 transition-colors shadow-brutal-sm hover:translate-y-1 hover:shadow-none">초기화</button>
+                        </div>
+
+                        <!-- Filters -->
+                        <div class="space-y-6">
+                            <!-- Year -->
+                            <div class="flex flex-col md:flex-row md:items-center gap-3">
+                                <span class="font-black text-gray-900 bg-white border-2 border-gray-900 rounded-lg px-2 py-1 text-center w-24 transform rotate-1">활동 연도</span>
+                                <div class="flex flex-wrap gap-2">
+                                    <button class="px-4 py-1.5 rounded-full text-sm font-black bg-gray-900 text-white border-2 border-gray-900 shadow-sm">전체</button>
+                                    <button class="px-4 py-1.5 rounded-full text-sm font-bold bg-white text-gray-700 border-2 border-gray-900 hover:bg-yellow-200 transition-colors shadow-sm">2023년</button>
+                                    <button class="px-4 py-1.5 rounded-full text-sm font-bold bg-white text-gray-700 border-2 border-gray-900 hover:bg-yellow-200 transition-colors shadow-sm">2024년</button>
+                                    <button class="px-4 py-1.5 rounded-full text-sm font-bold bg-white text-gray-700 border-2 border-gray-900 hover:bg-yellow-200 transition-colors shadow-sm">2025년</button>
+                                    <button class="px-4 py-1.5 rounded-full text-sm font-bold bg-white text-gray-700 border-2 border-gray-900 hover:bg-yellow-200 transition-colors shadow-sm">2026년</button>
+                                </div>
+                            </div>
+                            
+                            <!-- Type -->
+                            <div class="flex flex-col md:flex-row md:items-start gap-3">
+                                <span class="font-black text-gray-900 bg-white border-2 border-gray-900 rounded-lg px-2 py-1 text-center w-24 transform -rotate-1 mt-1">활동 유형</span>
+                                <div class="flex flex-wrap gap-2">
+                                    <button class="px-4 py-1.5 rounded-full text-sm font-black bg-gray-900 text-white border-2 border-gray-900 shadow-sm">전체</button>
+                                    <button class="px-4 py-1.5 rounded-full text-sm font-bold bg-white text-gray-700 border-2 border-gray-900 hover:bg-mint-200 transition-colors shadow-sm">학습조직형</button>
+                                    <button class="px-4 py-1.5 rounded-full text-sm font-bold bg-white text-gray-700 border-2 border-gray-900 hover:bg-orange-200 transition-colors shadow-sm">활동조직형</button>
+                                    <button class="px-4 py-1.5 rounded-full text-sm font-bold bg-white text-gray-700 border-2 border-gray-900 hover:bg-lavender-200 transition-colors shadow-sm">시민모임형</button>
+                                    <button class="px-4 py-1.5 rounded-full text-sm font-bold bg-white text-gray-700 border-2 border-gray-900 hover:bg-gray-200 transition-colors shadow-sm">정책제안형</button>
+                                    <button class="px-4 py-1.5 rounded-full text-sm font-bold bg-white text-gray-700 border-2 border-gray-900 hover:bg-gray-200 transition-colors shadow-sm">조직설립형</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-center mt-2">
+                            <button class="font-black border-b-4 border-gray-900 pb-1 hover:text-forest-600 transition-colors inline-flex items-center gap-1">상세 의제 검색 열기 <i data-lucide="chevron-down"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Playful Grid List (19 Items) -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                    
+                    <!-- Items applied with neo-brutalism cards -->
+                    <a href="#" class="block bg-white border-4 border-gray-900 rounded-2xl p-5 shadow-brutal hover:-translate-y-2 hover:shadow-brutal-hover transition-all duration-300 relative group">
+                        <div class="absolute -right-2 -top-2 w-8 h-8 bg-mint-300 rounded-full border-2 border-gray-900 z-10 group-hover:scale-125 transition-transform"></div>
+                        <h4 class="text-lg font-black text-gray-900 mb-3 group-hover:text-forest-600 line-clamp-2 pr-4 relative z-20">
+                            [거리:감] 제로 프로젝트 : 영감수집가들
+                        </h4>
+                        <div class="text-xs font-bold text-gray-600 space-y-2 mt-auto">
+                            <div class="bg-gray-100 rounded px-2 py-1 border border-gray-300 w-max">서울시공익활동지원센터</div>
+                            <div class="flex justify-between items-center pt-2 border-t-2 border-dashed border-gray-200">
+                                <span>2026-06-12</span>
+                                <span class="flex items-center gap-1"><i data-lucide="eye" class="w-3 h-3"></i> 68</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="block bg-[#FFF0E5] border-4 border-gray-900 rounded-2xl p-5 shadow-brutal hover:-translate-y-2 hover:shadow-brutal-hover transition-all duration-300 relative group">
+                        <h4 class="text-lg font-black text-gray-900 mb-3 group-hover:text-orange-600 line-clamp-2">남다른 시각</h4>
+                        <div class="text-xs font-bold text-gray-600 space-y-2 mt-auto">
+                            <div class="bg-white rounded px-2 py-1 border border-gray-400 w-max">서울시공익활동지원센터</div>
+                            <div class="flex justify-between items-center pt-2 border-t-2 border-dashed border-gray-300">
+                                <span>2026-06-12</span>
+                                <span class="flex items-center gap-1"><i data-lucide="eye" class="w-3 h-3"></i> 46</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="block bg-white border-4 border-gray-900 rounded-2xl p-5 shadow-brutal hover:-translate-y-2 hover:shadow-brutal-hover transition-all duration-300 relative group">
+                        <h4 class="text-lg font-black text-gray-900 mb-3 group-hover:text-forest-600 line-clamp-2">도시식물탐사대</h4>
+                        <div class="text-xs font-bold text-gray-600 space-y-2 mt-auto">
+                            <div class="bg-gray-100 rounded px-2 py-1 border border-gray-300 w-max">서울시공익활동지원센터</div>
+                            <div class="flex justify-between items-center pt-2 border-t-2 border-dashed border-gray-200">
+                                <span>2026-06-11</span>
+                                <span class="flex items-center gap-1"><i data-lucide="eye" class="w-3 h-3"></i> 59</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="block bg-white border-4 border-gray-900 rounded-2xl p-5 shadow-brutal hover:-translate-y-2 hover:shadow-brutal-hover transition-all duration-300 relative group">
+                        <h4 class="text-lg font-black text-gray-900 mb-3 group-hover:text-forest-600 line-clamp-2">함께갈레</h4>
+                        <div class="text-xs font-bold text-gray-600 space-y-2 mt-auto">
+                            <div class="bg-gray-100 rounded px-2 py-1 border border-gray-300 w-max">서울시공익활동지원센터</div>
+                            <div class="flex justify-between items-center pt-2 border-t-2 border-dashed border-gray-200">
+                                <span>2026-06-11</span>
+                                <span class="flex items-center gap-1"><i data-lucide="eye" class="w-3 h-3"></i> 44</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="block bg-[#E8F3EF] border-4 border-gray-900 rounded-2xl p-5 shadow-brutal hover:-translate-y-2 hover:shadow-brutal-hover transition-all duration-300 relative group">
+                        <div class="absolute -right-2 -bottom-2 w-8 h-8 bg-yellow-300 rounded-full border-2 border-gray-900 z-10 group-hover:rotate-45 transition-transform flex items-center justify-center text-xs font-black">!</div>
+                        <h4 class="text-lg font-black text-gray-900 mb-3 group-hover:text-forest-600 line-clamp-2">안심이</h4>
+                        <div class="text-xs font-bold text-gray-600 space-y-2 mt-auto">
+                            <div class="bg-white rounded px-2 py-1 border border-gray-300 w-max">서울시공익활동지원센터</div>
+                            <div class="flex justify-between items-center pt-2 border-t-2 border-dashed border-gray-300">
+                                <span>2026-06-11</span>
+                                <span class="flex items-center gap-1"><i data-lucide="eye" class="w-3 h-3"></i> 65</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="block bg-white border-4 border-gray-900 rounded-2xl p-5 shadow-brutal hover:-translate-y-2 hover:shadow-brutal-hover transition-all duration-300 relative group">
+                        <h4 class="text-lg font-black text-gray-900 mb-3 group-hover:text-forest-600 line-clamp-2">열중 쉬어</h4>
+                        <div class="text-xs font-bold text-gray-600 space-y-2 mt-auto">
+                            <div class="bg-gray-100 rounded px-2 py-1 border border-gray-300 w-max">서울시공익활동지원센터</div>
+                            <div class="flex justify-between items-center pt-2 border-t-2 border-dashed border-gray-200">
+                                <span>2026-06-11</span>
+                                <span class="flex items-center gap-1"><i data-lucide="eye" class="w-3 h-3"></i> 118</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="block bg-white border-4 border-gray-900 rounded-2xl p-5 shadow-brutal hover:-translate-y-2 hover:shadow-brutal-hover transition-all duration-300 relative group">
+                        <h4 class="text-lg font-black text-gray-900 mb-3 group-hover:text-forest-600 line-clamp-2">노원 인권수다</h4>
+                        <div class="text-xs font-bold text-gray-600 space-y-2 mt-auto">
+                            <div class="bg-gray-100 rounded px-2 py-1 border border-gray-300 w-max">서울시공익활동지원센터</div>
+                            <div class="flex justify-between items-center pt-2 border-t-2 border-dashed border-gray-200">
+                                <span>2026-06-10</span>
+                                <span class="flex items-center gap-1"><i data-lucide="eye" class="w-3 h-3"></i> 50</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="block bg-white border-4 border-gray-900 rounded-2xl p-5 shadow-brutal hover:-translate-y-2 hover:shadow-brutal-hover transition-all duration-300 relative group">
+                        <h4 class="text-lg font-black text-gray-900 mb-3 group-hover:text-forest-600 line-clamp-2">와하하운동장</h4>
+                        <div class="text-xs font-bold text-gray-600 space-y-2 mt-auto">
+                            <div class="bg-gray-100 rounded px-2 py-1 border border-gray-300 w-max">서울시공익활동지원센터</div>
+                            <div class="flex justify-between items-center pt-2 border-t-2 border-dashed border-gray-200">
+                                <span>2026-06-09</span>
+                                <span class="flex items-center gap-1"><i data-lucide="eye" class="w-3 h-3"></i> 87</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="block bg-white border-4 border-gray-900 rounded-2xl p-5 shadow-brutal hover:-translate-y-2 hover:shadow-brutal-hover transition-all duration-300 relative group">
+                        <h4 class="text-lg font-black text-gray-900 mb-3 group-hover:text-forest-600 line-clamp-2">다다르다</h4>
+                        <div class="text-xs font-bold text-gray-600 space-y-2 mt-auto">
+                            <div class="bg-gray-100 rounded px-2 py-1 border border-gray-300 w-max">서울시공익활동지원센터</div>
+                            <div class="flex justify-between items-center pt-2 border-t-2 border-dashed border-gray-200">
+                                <span>2026-06-09</span>
+                                <span class="flex items-center gap-1"><i data-lucide="eye" class="w-3 h-3"></i> 138</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="block bg-[#F3E8FF] border-4 border-gray-900 rounded-2xl p-5 shadow-brutal hover:-translate-y-2 hover:shadow-brutal-hover transition-all duration-300 relative group">
+                        <h4 class="text-lg font-black text-gray-900 mb-3 group-hover:text-purple-600 line-clamp-2">주파수</h4>
+                        <div class="text-xs font-bold text-gray-600 space-y-2 mt-auto">
+                            <div class="bg-white rounded px-2 py-1 border border-gray-300 w-max">서울시공익활동지원센터</div>
+                            <div class="flex justify-between items-center pt-2 border-t-2 border-dashed border-gray-300">
+                                <span>2026-06-08</span>
+                                <span class="flex items-center gap-1"><i data-lucide="eye" class="w-3 h-3"></i> 118</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="block bg-white border-4 border-gray-900 rounded-2xl p-5 shadow-brutal hover:-translate-y-2 hover:shadow-brutal-hover transition-all duration-300 relative group">
+                        <h4 class="text-lg font-black text-gray-900 mb-3 group-hover:text-forest-600 line-clamp-2">셰도우핀즈</h4>
+                        <div class="text-xs font-bold text-gray-600 space-y-2 mt-auto">
+                            <div class="bg-gray-100 rounded px-2 py-1 border border-gray-300 w-max">서울시공익활동지원센터</div>
+                            <div class="flex justify-between items-center pt-2 border-t-2 border-dashed border-gray-200">
+                                <span>2026-06-05</span>
+                                <span class="flex items-center gap-1"><i data-lucide="eye" class="w-3 h-3"></i> 70</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="block bg-white border-4 border-gray-900 rounded-2xl p-5 shadow-brutal hover:-translate-y-2 hover:shadow-brutal-hover transition-all duration-300 relative group">
+                        <h4 class="text-lg font-black text-gray-900 mb-3 group-hover:text-forest-600 line-clamp-2">모영조!</h4>
+                        <div class="text-xs font-bold text-gray-600 space-y-2 mt-auto">
+                            <div class="bg-gray-100 rounded px-2 py-1 border border-gray-300 w-max">서울시공익활동지원센터</div>
+                            <div class="flex justify-between items-center pt-2 border-t-2 border-dashed border-gray-200">
+                                <span>2026-06-05</span>
+                                <span class="flex items-center gap-1"><i data-lucide="eye" class="w-3 h-3"></i> 80</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="#" class="block bg-white border-4 border-gray-900 rounded-2xl p-5 shadow-brutal hover:-translate-y-2 hover:shadow-brutal-hover transition-all duration-300 relative group">
+                        <h4 class="text-lg font-black text-gray-900 mb-3 group-hover:text-forest-600 line-clamp-2">청소년 책따세</h4>
+                        <div class="text-xs font-bold text-gray-600 space-y-2 mt-auto">
+                            <div class="bg-gray-100 rounded px-2 py-1 border border-gray-300 w-max">서울시공익활동지원센터</div>
+                            <div class="flex justify-between items-center pt-2 border-t-2 border-dashed border-gray-200">
+                                <span>2026-06-04</span>
+                                <span class="flex items-center gap-1"><i data-lucide="eye" class="w-3 h-3"></i> 230</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="block bg-white border-4 border-gray-900 rounded-2xl p-5 shadow-brutal hover:-translate-y-2 hover:shadow-brutal-hover transition-all duration-300 relative group">
+                        <h4 class="text-lg font-black text-gray-900 mb-3 group-hover:text-forest-600 line-clamp-2">두 울타리</h4>
+                        <div class="text-xs font-bold text-gray-600 space-y-2 mt-auto">
+                            <div class="bg-gray-100 rounded px-2 py-1 border border-gray-300 w-max">서울시공익활동지원센터</div>
+                            <div class="flex justify-between items-center pt-2 border-t-2 border-dashed border-gray-200">
+                                <span>2026-06-04</span>
+                                <span class="flex items-center gap-1"><i data-lucide="eye" class="w-3 h-3"></i> 44</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="block bg-[#E8F3EF] border-4 border-gray-900 rounded-2xl p-5 shadow-brutal hover:-translate-y-2 hover:shadow-brutal-hover transition-all duration-300 relative group">
+                        <h4 class="text-lg font-black text-gray-900 mb-3 group-hover:text-forest-600 line-clamp-2">지속가능한 소비탐험대</h4>
+                        <div class="text-xs font-bold text-gray-600 space-y-2 mt-auto">
+                            <div class="bg-white rounded px-2 py-1 border border-gray-300 w-max">서울시공익활동지원센터</div>
+                            <div class="flex justify-between items-center pt-2 border-t-2 border-dashed border-gray-300">
+                                <span>2026-06-02</span>
+                                <span class="flex items-center gap-1"><i data-lucide="eye" class="w-3 h-3"></i> 89</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="block bg-white border-4 border-gray-900 rounded-2xl p-5 shadow-brutal hover:-translate-y-2 hover:shadow-brutal-hover transition-all duration-300 relative group">
+                        <h4 class="text-lg font-black text-gray-900 mb-3 group-hover:text-forest-600 line-clamp-2">외로움을 쓰다 2.0</h4>
+                        <div class="text-xs font-bold text-gray-600 space-y-2 mt-auto">
+                            <div class="bg-gray-100 rounded px-2 py-1 border border-gray-300 w-max">서울시공익활동지원센터</div>
+                            <div class="flex justify-between items-center pt-2 border-t-2 border-dashed border-gray-200">
+                                <span>2026-06-02</span>
+                                <span class="flex items-center gap-1"><i data-lucide="eye" class="w-3 h-3"></i> 86</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="block bg-[#FFF0E5] border-4 border-gray-900 rounded-2xl p-5 shadow-brutal hover:-translate-y-2 hover:shadow-brutal-hover transition-all duration-300 relative group">
+                        <h4 class="text-lg font-black text-gray-900 mb-3 group-hover:text-orange-600 line-clamp-2">생돌콜렉티브</h4>
+                        <div class="text-xs font-bold text-gray-600 space-y-2 mt-auto">
+                            <div class="bg-white rounded px-2 py-1 border border-gray-300 w-max">서울시공익활동지원센터</div>
+                            <div class="flex justify-between items-center pt-2 border-t-2 border-dashed border-gray-300">
+                                <span>2026-06-01</span>
+                                <span class="flex items-center gap-1"><i data-lucide="eye" class="w-3 h-3"></i> 76</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="block bg-white border-4 border-gray-900 rounded-2xl p-5 shadow-brutal hover:-translate-y-2 hover:shadow-brutal-hover transition-all duration-300 relative group">
+                        <h4 class="text-lg font-black text-gray-900 mb-3 group-hover:text-forest-600 line-clamp-2">'반려'되지 않는 세상</h4>
+                        <div class="text-xs font-bold text-gray-600 space-y-2 mt-auto">
+                            <div class="bg-gray-100 rounded px-2 py-1 border border-gray-300 w-max">서울시공익활동지원센터</div>
+                            <div class="flex justify-between items-center pt-2 border-t-2 border-dashed border-gray-200">
+                                <span>2026-06-01</span>
+                                <span class="flex items-center gap-1"><i data-lucide="eye" class="w-3 h-3"></i> 67</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="block bg-white border-4 border-gray-900 rounded-2xl p-5 shadow-brutal hover:-translate-y-2 hover:shadow-brutal-hover transition-all duration-300 relative group">
+                        <h4 class="text-lg font-black text-gray-900 mb-3 group-hover:text-forest-600 line-clamp-2">[플]뿌리스터디</h4>
+                        <div class="text-xs font-bold text-gray-600 space-y-2 mt-auto">
+                            <div class="bg-gray-100 rounded px-2 py-1 border border-gray-300 w-max">서울시공익활동지원센터</div>
+                            <div class="flex justify-between items-center pt-2 border-t-2 border-dashed border-gray-200">
+                                <span>2026-05-29</span>
+                                <span class="flex items-center gap-1"><i data-lucide="eye" class="w-3 h-3"></i> 116</span>
+                            </div>
+                        </div>
+                    </a>
+
+                </div>
+                
+                <!-- Pagination -->
+                <div class="flex justify-center mt-12">
+                    <nav class="flex items-center gap-3">
+                        <button class="w-12 h-12 flex items-center justify-center rounded-full border-4 border-gray-400 text-gray-400 bg-gray-100 cursor-not-allowed" disabled><i data-lucide="chevron-left" class="w-6 h-6"></i></button>
+                        <button class="w-12 h-12 flex items-center justify-center rounded-full bg-forest-600 text-white font-black shadow-brutal border-4 border-gray-900 text-lg">1</button>
+                        <button class="w-12 h-12 flex items-center justify-center rounded-full border-4 border-gray-900 bg-white text-gray-900 hover:bg-yellow-200 font-black transition-colors shadow-brutal-sm hover:shadow-none hover:translate-y-1 text-lg">2</button>
+                        <button class="w-12 h-12 flex items-center justify-center rounded-full border-4 border-gray-900 bg-white text-gray-900 hover:bg-yellow-200 font-black transition-colors shadow-brutal-sm hover:shadow-none hover:translate-y-1"><i data-lucide="chevron-right" class="w-6 h-6"></i></button>
+                    </nav>
+                </div>
+            </section>
+
+            <section class="bg-[#FFF4E6] border-4 border-gray-900 rounded-[2rem] p-8 md:p-12 mb-12 shadow-brutal relative overflow-hidden">
+                <!-- Decorative Shapes -->
+                <div class="absolute -top-10 -right-10 w-40 h-40 bg-orange-400 rounded-full border-4 border-gray-900 opacity-50"></div>
+                <div class="absolute bottom-5 left-5 text-6xl opacity-20">📞</div>
+
+                <div class="flex flex-col md:flex-row justify-between items-center gap-10 relative z-10">
+                    <div class="flex-1">
+                        <div class="inline-block bg-orange-600 text-white text-sm font-black px-4 py-1.5 rounded-full mb-4 border-2 border-gray-900 shadow-brutal-sm transform -rotate-2">
+                            NOTICE
+                        </div>
+                        <h3 class="text-3xl font-black text-gray-900 mb-4">
+                            궁금한 점이 있으신가요?
+                        </h3>
+                        <p class="text-gray-800 font-bold text-lg mb-2">
+                            당신의 첫 공익활동, 주저하지 말고 연락주세요!
+                        </p>
+                        <p class="text-gray-600 font-semibold mb-6">
+                            ※ 2026년 <strong class="text-orange-600 font-black">하반기 모집은 7월 중순</strong> 시작될 예정입니다.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-2xl shadow-brutal-sm border-4 border-gray-900 w-full md:w-auto flex-shrink-0 transform rotate-1">
+                        <h4 class="font-black text-xl text-gray-900 mb-4 border-b-2 border-dashed border-gray-300 pb-2">
+                            서울시공익활동지원센터<br><span class="text-orange-600">전략사업팀 담당자</span>
+                        </h4>
+                        <div class="font-bold text-gray-800 space-y-3">
+                            <p class="flex items-center gap-3">
+                                <span class="bg-gray-100 p-2 rounded-lg border-2 border-gray-900"><i data-lucide="phone" class="w-5 h-5 text-gray-700"></i></span>
+                                <span>070-7772-6119<br>070-7727-7649</span>
+                            </p>
+                            <p class="flex items-center gap-3">
+                                <span class="bg-gray-100 p-2 rounded-lg border-2 border-gray-900"><i data-lucide="mail" class="w-5 h-5 text-gray-700"></i></span>
+                                <span class="text-sm">bmcranky@seoulpa.kr<br>dhyeon@seoulpa.kr</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </article>
+    </main>
+
+    <footer class="bg-gray-900 border-t-8 border-black pt-12 pb-8">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <h2 class="text-white font-black text-2xl mb-4">당신 옆의 공익활동</h2>
+            <p class="text-gray-400 font-bold text-sm mb-8">당신의 일상적인 상상이 의미 있는 실천이 되는 곳</p>
+            <div class="border-t border-gray-800 pt-8 mt-8">
+                <p class="text-gray-500 font-semibold text-xs">&copy; 2026 서울시공익활동지원센터. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>
